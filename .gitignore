@@ -1,0 +1,14 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 本地数据、授权令牌、缓存（绝不提交）
+.local/
+.qa/
+*.log
+
+# 密钥与本地经营参数（只提交 .example 模板）
+.env
+.env.*
+!.env.example
+config/business.json
