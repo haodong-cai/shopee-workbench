@@ -1,0 +1,19 @@
+{
+  "_说明": "复制本文件为 config/business.json 后按自己的实际情况填写；留空（null 或空字符串）表示未设置，相关毛利会显示“待补”，不会按 0 计算。修改后需重启工作台。",
+  "overseasFees": {
+    "_说明": "海外仓履约费用（人民币）：packingPerOrder = 每单打包费，transportPerPair = 每双鞋的运输费。未填写的站点不参与海外仓毛利试算。",
+    "MY": { "packingPerOrder": null, "transportPerPair": null },
+    "TH": { "packingPerOrder": null, "transportPerPair": null },
+    "VN": { "packingPerOrder": null, "transportPerPair": null },
+    "PH": { "packingPerOrder": null, "transportPerPair": null }
+  },
+  "crossBorderPerPair": null,
+  "_crossBorderPerPair说明": "跨境订单的头程 / 处理费（人民币，每双鞋），配件不计双数。",
+  "leadDays": { "MY": null, "TH": null, "VN": null, "PH": null },
+  "_leadDays说明": "断货预警用的头程天数（从在途单创建到入仓）。也可以在“断货预警”页面里直接填写。",
+  "safetyDays": 3,
+  "skuPrefixes": { "shoe": "", "accessory": "" },
+  "_skuPrefixes说明": "按 SPU 编码前缀自动判断“鞋 / 配件”的正则表达式，例如 \"^SH\" 和 \"^AC\"；留空则只用人工核对清单 .local/sku-roles.json。",
+  "knownAdCampaignIds": { "MY": [], "TH": [], "VN": [], "PH": [], "BR": [] },
+  "_knownAdCampaignIds说明": "可选：接口列表里查不到、但需要补查的广告组 ID。"
+}

@@ -1,0 +1,13 @@
+{
+  "overseasFees": {
+    "MY": { "packingPerOrder": 4, "transportPerPair": 2 },
+    "TH": { "packingPerOrder": 2, "transportPerPair": 1 },
+    "VN": { "packingPerOrder": 2, "transportPerPair": 0.5 },
+    "PH": { "packingPerOrder": 3, "transportPerPair": 2 }
+  },
+  "crossBorderPerPair": 0.5,
+  "leadDays": { "MY": 25, "TH": 20, "VN": 10, "PH": 28 },
+  "safetyDays": 3,
+  "skuPrefixes": { "shoe": "^SH[A-Z]{1,3}\\d", "accessory": "^ACC" },
+  "knownAdCampaignIds": { "VN": [9000001], "TH": [9000002, 9000003] }
+}

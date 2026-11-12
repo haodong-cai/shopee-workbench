@@ -1,0 +1,57 @@
+.ops > .toolbar { padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.ops > .toolbar > button { align-self: flex-end; }
+.ops-ads-bar { justify-content: space-between; align-items: center !important; }
+.ops-ads-bar p { font-size: 12.5px; }
+
+/* 店铺条 */
+.shop-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.strip { padding: 12px 14px; }
+.strip header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.strip header strong { flex: 1; min-width: 0; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.strip dl { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); justify-content: space-between; gap: 8px 12px; margin: 0; }
+.strip dl.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.strip dl .strip-wide { grid-column: 1 / -1; }
+.strip dd.sm { font-size: 13px; }
+.strip header strong small { font: 500 11px var(--font-num); color: var(--ink-3); margin-left: 6px; }
+.strip dt { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+.strip dd { margin: 2px 0 0; font-size: 17px; font-weight: 600; white-space: nowrap; }
+.strip dd small { font-size: 12px; color: var(--ink-3); font-weight: 500; margin-left: 1px; }
+.strip > p { font-size: 12.5px; }
+
+/* 单店卡片（广告） */
+.shop { overflow: hidden; }
+.shop-head { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+.shop-head > div { flex: 1; min-width: 0; }
+.shop-head strong { display: block; font-size: 14px; font-weight: 700; }
+.shop-head span:not(.mk):not(.tag) { display: block; font-size: 12px; color: var(--ink-3); }
+.shop-callout { margin: 12px 16px 0; }
+.shop-empty { padding: 16px; }
+.kpis.flat { border: 0; border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--line); }
+.kpis.flat .kpi > strong { font-size: 21px; }
+.shop-body { padding: 14px 16px 16px; display: grid; gap: 12px; }
+.shop-body > .tbl { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.ads-daily td { vertical-align: middle; padding-top: 8px; padding-bottom: 8px; }
+.ads-daily .bar-cell { min-width: 150px; }
+.ads-daily .bar-cell i { right: auto; }
+.note { font-size: 12px; color: var(--ink-3); line-height: 1.6; }
+
+/* 明细表 */
+.ops-table td { vertical-align: top; }
+.ops-table td:nth-child(2), .ops-table td:nth-child(3) { padding-top: 12px; }
+.icon-sm { width: 28px; padding: 0 !important; }
+.flip { transform: rotate(180deg); }
+.fee-fields { padding: 14px 18px 16px; }
+.fee-fields dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0 24px; margin: 0 0 10px; }
+.fee-fields dl > div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: 12.5px; }
+.fee-fields dt { color: var(--ink-2); }
+.fee-fields dd { margin: 0; font-weight: 600; }
+
+@media (max-width: 820px) {
+  .ops > .toolbar { padding: 10px; }
+  .ops > .toolbar .field { flex: 1 1 140px; }
+  .kpis.flat { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ads-daily { min-width: 560px; }
+  .shop-body { overflow-x: auto; }
+}
+
+.tbl td.num small { display: inline; margin-left: 4px; font-size: 11px; }

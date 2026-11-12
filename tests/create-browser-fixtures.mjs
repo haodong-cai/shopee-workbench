@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
+import JSZip from 'jszip';
+const testText = await fs.readFile(new URL('./workbook.test.mjs', import.meta.url), 'utf8');
+const start = testText.indexOf('const NS =');
+const end = testText.indexOf("test('UTF-8");
+const sandbox = { JSZip, Buffer };
+vm.createContext(sandbox);
+vm.runInContext(`${testText.slice(start, end)}\n globalThis.fixture=fixture; globalThis.csv=csv;`, sandbox);
+const target = new URL('../.qa/', import.meta.url);
+await fs.mkdir(target, { recursive: true });
+await fs.writeFile(new URL('products-test.csv', target), sandbox.csv);
+await fs.writeFile(new URL('template-test-not-official.xlsx', target), await sandbox.fixture());
+console.log('已生成仅供本地浏览器测试的数据与非官方模板。');

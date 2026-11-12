@@ -1,0 +1,33 @@
+.rt-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.rt-types button { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; padding: 4px 14px; min-height: 32px; }
+.rt-types button b { font: 600 12px var(--font-num); color: var(--ink-3); }
+.rt-types button[aria-pressed=true] b { color: var(--accent-ink); }
+.rt-kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 14px; }
+.rt-bar { margin: 4px 0 12px; padding: 10px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.rt .callout { margin-bottom: 12px; }
+.rt-kind { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.rt-kind::before { display: none; }
+.rt-table td:nth-child(3), .rt-table td:nth-child(4) { padding-top: 12px; }
+.rt-reason { min-width: 120px; max-width: 200px; white-space: normal; }
+.rt-reason small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 190px; }
+.rt-progress { min-width: 170px; max-width: 260px; white-space: normal; }
+.rt-progress small { display: block; }
+.rt-todo { display: block; font-weight: 600; color: var(--bad); }
+.rt-todo + .rt-todo { margin-top: 2px; }
+.rt-due { white-space: nowrap; }
+.rt-due b { display: block; font-weight: 600; }
+.rt-due b.bad { color: var(--bad); }
+.rt-due b.warn { color: var(--warn); }
+.rt-due small { display: block; }
+.rt-table tr.rt-done > td { color: var(--ink-3); }
+.rt-detail { padding: 14px 18px 16px; display: grid; gap: 10px; }
+.rt-detail dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0 24px; margin: 0; }
+.rt-detail dl > div { padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 12.5px; }
+.rt-detail dt { color: var(--ink-3); font-size: 11.5px; }
+.rt-detail dd { margin: 2px 0 0; font-weight: 600; color: var(--ink); }
+.rt-detail dd small { display: block; font-weight: 400; color: var(--ink-3); white-space: normal; }
+.rt-text { font-size: 13px; color: var(--ink-2); line-height: 1.7; }
+.rt-text b { font-weight: 600; color: var(--ink); }
+.rt-scope { margin-top: 10px; }
+@media (max-width: 1000px) { .rt-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 820px) { .rt-table { min-width: 980px; } .rt-types { max-width: 100%; overflow-x: auto; } }
